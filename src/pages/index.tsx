@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Container } from '../styles/pages/Home';
+
+import * as S from '../styles/pages/Home';
 
 const Home: NextPage = () => {
   return (
@@ -9,10 +10,24 @@ const Home: NextPage = () => {
         <title>IP Address Tracker</title>
       </Head>
 
-      <Container>
-        <h1>Hello Dev! (:</h1>
-        <p>Olá Dev! (;</p>
-      </Container>
+      <S.MainContainer>
+        <S.Header>
+          <h1>IP Address Tracker</h1>
+
+          <form>
+            <input
+              type="text"
+              placeholder="Search for any IP adress or domain"
+            />
+
+            <button type="submit">
+              <img src="/images/icons/icon-arrow.svg" />
+            </button>
+          </form>
+        </S.Header>
+
+        <div>Map</div>
+      </S.MainContainer>
     </>
   );
 };
