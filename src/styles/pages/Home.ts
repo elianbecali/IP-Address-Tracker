@@ -7,8 +7,8 @@ export const Header = styled.section`
   flex-direction: column;
   align-items: center;
 
-  width: 100vw;
-  min-height: 250px;
+  width: 100%;
+  height: 15.625rem;
   background: url('/images/pattern-bg.png') no-repeat center center;
 
   h1 {
@@ -50,4 +50,10 @@ export const Header = styled.section`
       cursor: pointer;
     }
   }
+`;
+
+export const MapWrapper = styled.div`
+  height: calc(100vh - 15.625rem);
+  width: 100vw;
+  position: relative;
 `;

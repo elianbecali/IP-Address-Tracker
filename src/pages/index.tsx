@@ -1,7 +1,12 @@
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 import * as S from '../styles/pages/Home';
+
+const Map = dynamic(() => import('../components/Map'), {
+  ssr: false
+});
 
 const Home: NextPage = () => {
   return (
@@ -26,7 +31,9 @@ const Home: NextPage = () => {
           </form>
         </S.Header>
 
-        <div>Map</div>
+        <S.MapWrapper>
+          <Map />
+        </S.MapWrapper>
       </S.MainContainer>
     </>
   );

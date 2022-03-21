@@ -7,10 +7,6 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body {
-    height: 100vh;
-  }
-
   body, input {
     font: 400 1rem 'Rubik', sans-serif;
   }
@@ -26,4 +22,6 @@ export default createGlobalStyle`
       font-size: 87.5%;
     }
   }
+
+
 `;
